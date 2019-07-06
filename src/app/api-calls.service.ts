@@ -8,11 +8,7 @@ import { Post } from "./Post";
 })
 export class ApiCallsService {
   constructor(private http: HttpClient) {}
-  posts: Observable<Post[]>;
   getData() {
-    this.posts = this.http.get<Post[]>(
-      "https://jsonplaceholder.typicode.com/posts"
-    );
-    return this.posts;
+    return this.http.get<Post[]>("https://jsonplaceholder.typicode.com/posts");
   }
 }
