@@ -1,0 +1,24 @@
+<form class="example-form" [formGroup]="loginForm">
+  <h2>Login Form</h2>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="User name" formControlName="username" />
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input
+      matInput
+      type="password"
+      placeholder="Password"
+      formControlName="password"
+    />
+  </mat-form-field>
+  <button
+    mat-button
+    color="primary"
+    (click)="login()"
+    [disabled]="!loginForm.valid"
+  >
+    Login
+  </button>
+  <button mat-button color="accent" (click)="cancel()">Cancel</button>
+</form>
