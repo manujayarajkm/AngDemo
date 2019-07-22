@@ -23,19 +23,19 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item *ngIf="!userLoggedIn">
-        <mat-icon>airplay</mat-icon>
+        <mat-icon color="primary">airplay</mat-icon>
         <span (click)="login()">Login</span>
       </button>
       <button mat-menu-item *ngIf="!userLoggedIn">
-        <mat-icon>add_to_queue</mat-icon>
+        <mat-icon color="primary">add_to_queue</mat-icon>
         <span (click)="register()">Sign Up</span>
       </button>
       <button mat-menu-item>
-        <mat-icon>info</mat-icon>
+        <mat-icon color="primary">info</mat-icon>
         <span>About Us</span>
       </button>
       <button mat-menu-item *ngIf="userLoggedIn">
-        <mat-icon>input</mat-icon>
+        <mat-icon color="primary">input</mat-icon>
         <span (click)="logout()">Log Out</span>
       </button>
     </mat-menu>
